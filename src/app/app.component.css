@@ -1,0 +1,23 @@
+.example-container {
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .example-sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+  }
+  .mat-step-header .mat-step-icon-selected {
+    background-color: #0F5A90;
+  }
+
+  

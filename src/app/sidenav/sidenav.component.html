@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider>  
+
+  <button mat-raised-button style="background-color: #4C70E6;color: white;">Primary</button> -->
+  <!-- <mat-toolbar style="background-color: #3f51b5">
+    <span class="text-white" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Generating Microservices</span>
+  </mat-toolbar> -->
+  <mat-sidenav-container style="height: 100%;">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav " style="background-color: white;"  >
+      <mat-vertical-stepper labelPosition="left" #stepper style="width: 100%;">
+        <mat-step  style="color: tomato;">
+
+          <ng-template matStepLabel>DB Connect </ng-template>
+
+        </mat-step>
+        <mat-step >
+
+          <ng-template matStepLabel>Choose Entities</ng-template>
+
+        </mat-step>
+        <mat-step  >
+
+          <ng-template matStepLabel>Data Structure</ng-template>
+
+        </mat-step>
+        <mat-step  >
+
+          <ng-template matStepLabel>Micro Defination</ng-template>
+
+        </mat-step>
+        <mat-step  >
+
+          <ng-template matStepLabel>Managing</ng-template>
+
+        </mat-step>
+        <mat-step  >
+
+          <ng-template matStepLabel>Summary</ng-template>
+
+        </mat-step>
+        <ng-template matStepperIcon="phone">
+          <mat-icon>call_end</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="chat">
+          <mat-icon>forum</mat-icon>
+        </ng-template>
+      </mat-vertical-stepper>
+      <hr style="margin-top: 20%;" class="bg-dark">
+      <br/>
+      <span style="font-size: xx-large;"  class="text-dark m-5">Abc:xyz</span>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="container-fluid">
+        <div class="row">
+          <span style="width: 100%;background-color: #3f51b5;height: 40px;margin-top: 1px;font-size: large;" class="text-white p-2" >Database Configuration Defination Page!!!</span>
+          <div class="card col-md-12 p-3">
+            <div class="row p-3">
+              <div class="col-mt-3 ml-3">
+                  <mat-form-field>
+                    <mat-label class="text-dark">Database Type</mat-label>
+                    <mat-select >
+                      <mat-option value="option1">MongoDB</mat-option>
+                      <mat-option value="option2">DB2</mat-option>
+                      <mat-option value="option3">Cassandra</mat-option>
+                      <mat-option value="option4">Couchbase</mat-option>
+                      <mat-option value="option5">Postgres</mat-option>
+                      <mat-option value="option6">Oracle</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+              </div>
+              <div class="col-mt-4 offset-2 ">
+                <mat-form-field class="example-full-width" style="width: 120%;"  >
+                  <mat-label class="text-dark">DB URL</mat-label>
+                  <input type="text" matInput style="font-size: small;"  placeholder="mongodb://ipaddress:dbport/:">
+                  <mat-error >
+                    Please enter a valid email address
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-mt-3 offset-2">
+                <!-- <span class="h6">DB Name</span> -->
+                <mat-form-field class="example-full-width" style="width: 110%;" >
+                  <mat-label class="text-dark">DB Name</mat-label>
+                  <input type="text" matInput >
+                  <mat-error >
+                    Please enter a valid email address
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row p-3"  style="line-height: 0.2;">
+              <div class="col-md-3">
+                <!-- <span class="h6">DB Schema</span> -->
+                  <mat-form-field  style="width: 110%;">
+                    <mat-label class="text-dark">DB Schema</mat-label>
+                    <input type="text" matInput >
+                    <mat-error >
+                      Please enter a valid email address
+                    </mat-error>  
+                  </mat-form-field>
+              </div>
+              <div class="col-md-3 offset-1">
+                <!-- <span class="h6">DB Userid</span> -->
+                <mat-form-field class="example-full-width" style="width: 110%;" >
+                  <mat-label class="text-dark">DB Userid</mat-label>
+                  <input type="text" matInput >
+                  <mat-error >
+                    Please enter a valid email address
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-3 offset-1">
+                <!-- <span class="h6">DB Password</span> -->
+                <mat-form-field class="example-full-width" style="width: 110%;" >
+                  <mat-label class="text-dark">DB Password</mat-label>
+                  <input type="text" matInput >
+                  <mat-error >
+                    Please enter a valid email address
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>            
+              <div class="col-md-12 text-right">
+                <button mat-raised-button style="width: 120px;background-color: #0F5A90;color: white;" >Add</button>
+                <!-- <button mat-fab  color="warn" class="ml-3"><mat-icon>add</mat-icon></button> -->
+                <!-- <button mat-raised-button style="width: 100%;" color="warn">Add</button> -->
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <span style="width: 100%;background-color: #3f51b5;height: 40px;margin-top: 1px;font-size: large;" class="text-white text-center p-2" >Database</span>
+          <table class="table table-striped">
+            <thead style="background-color: #3f51b5; color: white;">
+              <tr>
+                <th scope="col" class="text-center">Sr.No.</th>
+                <th scope="col" class="text-center">Db Name</th>
+                <th scope="col" class="text-center">Db Provider</th>
+                <th scope="col" class="text-center">Db Url</th>
+                <th scope="col" class="text-center">Db Schema</th>
+                <th scope="col" class="text-center">Action</th>
+                <th scope="col" class="text-center">Upload Script</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="text-center" scope="row">1.</th>
+                <td class="text-center">Postgres</td>
+                <td class="text-center">Postgresql</td>
+                <td class="text-center">postgres://10.09.123.12:1234/</td>
+                <td class="text-center">public</td>
+                <td class="text-center"><mat-icon>delete</mat-icon></td>
+                <td class="text-center"><button mat-raised-button style="width: 80%;background-color: #0F5A90;color: white;" >Upload Tables<mat-icon>upload</mat-icon></button></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center">2.</th>
+                <td class="text-center">grocery</td>
+                <td class="text-center">Cassandra</td>
+                <td class="text-center">cassandra://10.09.123.12:1234/</td>
+                <td class="text-center">grocery</td>
+                <td class="text-center"><mat-icon>delete</mat-icon></td>
+                <td class="text-center"><button mat-raised-button style="width: 80%;background-color: #0F5A90;color: white;" >Upload Tables<mat-icon>upload</mat-icon></button></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center">3.</th>
+                <td class="text-center">TESTDB</td>
+                <td class="text-center">DB2</td>
+                <td class="text-center">db2://10.09.123.12:1234/</td>
+                <td class="text-center">TESTDB</td>
+                <td class="text-center"><mat-icon>delete</mat-icon></td>
+                <td class="text-center"><button mat-raised-button style="width: 80%;background-color: #0F5A90;color: white;" >Upload Tables<mat-icon>upload</mat-icon></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-12 text-right">
+          <button mat-raised-button style="width: 120px;" class="btn-success">Next <mat-icon>trending_flat</mat-icon></button>
+        </div> 
+      </div>
+    </mat-sidenav-content>
+    
+    
+  </mat-sidenav-container>
+
+
+
+</body>
+
+</html>
